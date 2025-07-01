@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture vidéo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
+    video {
+      width: 80%;
+      max-width: 720px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenue sur ma page vidéo</h1>
+  <a href="#" onclick="lancerVideo()">▶ Lancer la vidéo</a>
+
+  <div id="videoContainer">
+    <video id="maVideo" controls autoplay>
+      <source src="IMG_1646.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+    </video>
+  </div>
+
+  <script>
+    function lancerVideo() {
+      const conteneur = document.getElementById('videoContainer');
+      const video = document.getElementById('maVideo');
+
+      conteneur.style.display = 'block';
+      video.play();
+    }
+  </script>
+
+</body>
+</html>
